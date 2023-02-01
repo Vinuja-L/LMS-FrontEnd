@@ -8,6 +8,7 @@ import About from './components/about/About.';
 
 
 
+
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
         <Route path='/about' exact component={About} />      
       </Switch>
       </Router>
+
       
     </>
   )
