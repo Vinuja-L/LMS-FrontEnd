@@ -115,6 +115,20 @@ const Auth = () =>{
                 >
                  Change TO  {isSignup ? "Login" : "Signup" }
                 </Button>
+
+                <Button 
+                
+                endIcon={
+                    isSignup ? <LoginOutlinedIcon/> : <HowToRegOutlinedIcon/>
+                }
+                onClick={resetState}
+                sx ={{margin:2,borderRadius:1}}
+                color="warning"
+                variant ="contained"
+            
+                >
+                 Change TO  {isSignup ? "Login" : "Signup" }
+                </Button>
             
             
             </Box>
