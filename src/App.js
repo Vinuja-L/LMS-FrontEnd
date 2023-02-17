@@ -2,25 +2,27 @@ import React from 'react'
 import "./App.css";
 import LoginPage from './pages/UserAuthentication/LoginPage';
 import Signup from './pages/UserAuthentication/Signup';
+import ForgotPassword from './pages/UserAuthentication/ForgotPassword';
+import Verification from './pages/UserAuthentication/Verification';
+import Emailconfirm from './pages/UserAuthentication/Emailconfirm';
+import { BrowserRouter as  Router, Route,Switch,Link} from "react-router-dom";
 
-
-
- 
-/*{import Header from "./components/common/headings/Header"
-import {  BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css'
-import Home from "./components/home/Home";
-import About from './components/about/About.';
-}*/
 
 
 function App() {
-  return (
-   <div className="App">
-    <Signup/>
+   return (
+   <Router>
+      <Switch>
+        <Route exact path="/" component={LoginPage} />
+        <Route exact path="/signup" component={Signup}/>
+        <Route exact path="/forgotPassword" component={ForgotPassword} />
+      </Switch>
+   </Router>
+ );
+}
 
-  
-    </div>
+export default App
+
  /*{ // <>
   //   <Router>
   //   <Header />
@@ -29,9 +31,17 @@ function App() {
   //     <Route path='/about' exact component={About} />      
   //   </Switch>
   //   </Router>  
-  // </>}*/
+ 
+  // </>}
+  
+  
+  */
 
-  );
-}
-
-export default App
+  
+ 
+/*{import Header from "./components/common/headings/Header"
+import {  BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css'
+import Home from "./components/home/Home";
+import About from './components/about/About.';
+}*/
