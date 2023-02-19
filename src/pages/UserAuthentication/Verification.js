@@ -115,7 +115,7 @@ const Verification = ()  => {
             LinkComponent={Link}
             to={'/Emailconfirm'}
             variant="contained" color="warning">
-                <b>Verify</b>
+                <b>Verify this </b>
           </Button>
  
     </Grid>
