@@ -3,9 +3,12 @@ import {Grid,TextField,Box,Button, Typography,} from "@mui/material"
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Link } from "react-router-dom";
+import "../UserAuthentication/Authentication.css";
+
 
 const Signup = () =>{
-    const [signdata,setSigndata]=useState({
+    const [signdata,setSigndata]= React.useState({
         Firstname:"",
         Lastname:"",
         Email:"",
@@ -19,9 +22,7 @@ const Signup = () =>{
       setSigndata({...signdata,[event.target.name]:event.target.value});
     }
 
-    
-
-      const handleSubmit =(event)=>{
+     const handleSubmit =(event)=>{
         event.preventDefault();
             console.log(signdata);
             setSigndata({
@@ -32,8 +33,6 @@ const Signup = () =>{
                 Password:"",
                 Userrole:"",
             })
-        
-
       };
     
     return(
@@ -55,7 +54,7 @@ const Signup = () =>{
           bgcolor="#27144B"
 
           sx={{
-              background:' radial-gradient(circle,#3A1C92,#321873,#2C165D,#27144B)',
+              background:' radial-gradient(circle,#b25000,#FF7300,#ff8f33,#FF7300)',
       }}
           >
             <Grid container direction="column">
@@ -67,7 +66,7 @@ const Signup = () =>{
 
               <Typography color="#E8E1FA" variant="h7" padding={0.2} 
               textAlign='center' fontFamily="Abril Fatface">
-                Already have an Account?Login</Typography>
+                Already have an Account? <Link href="#"> Login</Link></Typography>
                   </Grid>
              
 
@@ -77,15 +76,17 @@ const Signup = () =>{
                 borderRadius:'10px',width:'200px',height:'15px'} }} 
                 onChange={handleChange}
                 margin="normal" type={'text'}  variant="outlined"
-                placeholder="First Name"/>
+                placeholder="First Name"
+                
+                />
 
                   </Grid>
                   <Grid item sm={6}>
-              <TextField sx={{input : {color:'#8C8B8B' , bgcolor:'#fff',
-              borderRadius:'20px',width:'200px',height:'15px'}}}
-               margin="normal" type={'text'} variant="outlined"
-               onChange={handleChange}
-                placeholder="Last Name" />
+                  <TextField sx={{input : {color:'#8C8B8B' , bgcolor:'#fff',
+                  borderRadius:'20px',width:'200px',height:'15px'}}}
+                  margin="normal" type={'text'} variant="outlined"
+                  onChange={handleChange}
+                  placeholder="Last Name" />
 
                   </Grid>
               </Grid>
@@ -123,7 +124,7 @@ const Signup = () =>{
     displayEmpty
     inputProps={{ 'aria-label': 'Without label' }}
   >
-    <MenuItem value=''>
+    <MenuItem value='10'>
       <em>-Select-</em>
     </MenuItem>
     <MenuItem value={10}>Teacher</MenuItem>
@@ -137,9 +138,10 @@ const Signup = () =>{
 </Grid>
 </Grid>
 </Grid>
-<Button  
+<Button 
+ LinkComponent={Link} to {...'/signup'}
 sx={{marginTop:3, borderRadius:4,
-bgcolor:"#EB5E57",color:"black",
+bgcolor:"#fafafa",color:"black",
 fontFamily:"Abril Fatface"}}
 type ="submit" 
 variant="contained" color="warning">

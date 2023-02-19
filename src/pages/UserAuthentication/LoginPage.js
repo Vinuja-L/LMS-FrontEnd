@@ -3,13 +3,12 @@ import{Box,TextField,Typography,Button,Grid} from "@mui/material";
 import "../UserAuthentication/Authentication.css";
 import { Link } from "react-router-dom";
 import Loginimg from "../../images/loicon.png"
+import { LinkOffTwoTone } from "@mui/icons-material";
 
 
  
 const LoginPage = () =>{
-    
-    const [formData,setFormData]=useState({
-        
+     const [formData,setFormData]=useState({
         username:"",
         password:"",
 
@@ -23,6 +22,7 @@ const LoginPage = () =>{
       const handleChange =(event) =>{
         setFormData({...formData,[event.target.name]:event.target.value});
       };
+
       const validate = () => {
         let usernameError = "";
         let passwordError = "";
@@ -54,7 +54,6 @@ const LoginPage = () =>{
                 password:"",
             })
         }
-
       };
     
     return( 
@@ -92,7 +91,7 @@ const LoginPage = () =>{
        
             sx={{
               background:
-                " radial-gradient(circle,#ff7043,#ff8a65,#ff7043,#ffab91)",
+                " radial-gradient(circle,#b25000,#FF7300,#ff8f33,#FF7300)",
             }}
             
            >    <img src={Loginimg} width="140px" />
@@ -118,6 +117,7 @@ const LoginPage = () =>{
                           borderRadius: "20px",
                           width: "300px",
                         },
+                        
                       }}
                        onChange={handleChange}
                        value={formData.username}
@@ -130,7 +130,6 @@ const LoginPage = () =>{
                        helperText={errors.username}
                      />
                   
-
                 <TextField 
                   sx={{
                     "& fieldset": { border: "none" },
@@ -154,16 +153,17 @@ const LoginPage = () =>{
                       error={!!errors.password}
                       helperText={errors.password}
                 />
-
              <Typography
-
-         
                 variant="body2"
                 alignSelf="flex-end"
-                
+                color="blue"   
+                component={Link}
+                to ={"/ForgotPassword"}
               >
-                <i>Forgot password</i>
+                <i>Forgot password</i>              
               </Typography>
+
+
                 <Button 
                 style={{maxWidth: '190px', maxHeight: '190px', minWidth: '190px', minHeight: '30px'}}
                 sx={{
@@ -189,8 +189,9 @@ const LoginPage = () =>{
                 
               >
                  New to EduLab Pro ? {" "}
-                
+                 <Link to={"/Signup"}>
                  <i> Create New Account</i>
+                 </Link>
                  
             </Typography>
 
