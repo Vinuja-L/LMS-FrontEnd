@@ -3,6 +3,7 @@ import{Box,TextField,Typography,Button,Grid} from "@mui/material";
 import "../UserAuthentication/Authentication.css";
 import { Link } from "react-router-dom";
 import Loginimg from "../../images/loicon.png"
+import { LinkOffTwoTone } from "@mui/icons-material";
 
 
  
@@ -152,15 +153,14 @@ const LoginPage = () =>{
                       error={!!errors.password}
                       helperText={errors.password}
                 />
-
              <Typography
                 variant="body2"
                 alignSelf="flex-end"
                 color="blue"   
+                component={Link}
+                to ={"/ForgotPassword"}
               >
-               <Link to ={"/ForgotPassword"}>
-                <i>Forgot password</i>
-                </Link>
+                <i>Forgot password</i>              
               </Typography>
 
 

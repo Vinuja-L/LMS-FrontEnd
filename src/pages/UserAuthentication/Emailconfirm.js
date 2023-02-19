@@ -1,4 +1,5 @@
 import { Box,Button, Typography,Grid,Link, Icon } from "@mui/material";
+import "../UserAuthentication/Authentication.css";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React from "react";
 import { Height } from "@mui/icons-material";
@@ -25,7 +26,7 @@ const Emailconfirm = ()  => {
                 bgcolor="#27144B"
 
                 sx={{
-                    background:' radial-gradient(circle,#3A1C92,#321873,#2C165D,#27144B)',
+                    background:' radial-gradient(circle,#b25000,#FF7300,#ff8f33,#FF7300)',
             }}
                 >
                     {/*<img src={pass} width='180px'/>*/}
@@ -52,7 +53,7 @@ const Emailconfirm = ()  => {
     
 
     <Grid>
-        <Typography variant="h8" align="center" color='#E8E1FA' fontFamily="Abril Fatface">If you not got any E-mail? Resend Confirmation mail</Typography>
+        <Typography variant="h8" align="center" color='#E8E1FA' fontFamily="Abril Fatface">If you not got any E-mail? <Link href ="#"> Resend Confirmation mail </Link> </Typography>
     </Grid>
 
      </Box>

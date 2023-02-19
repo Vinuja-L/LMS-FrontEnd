@@ -1,5 +1,7 @@
 import { TextField,Box,Button, Typography, Grid } from "@mui/material";
 import React from "react";
+import "../UserAuthentication/Authentication.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -24,7 +26,7 @@ const forgotpsword = ()  => {
                 bgcolor="#27144B"
 
                 sx={{
-                    background:' radial-gradient(circle,#3A1C92,#321873,#2C165D,#27144B)',
+                    background:' radial-gradient(circle,#b25000,#FF7300,#ff8f33,#FF7300)',
             }}
                 >
                     
@@ -55,8 +57,20 @@ const forgotpsword = ()  => {
  </Grid>
     </Grid>
     <Grid pb={1}>
-            <Button  sx={{marginTop:3, borderRadius:4 ,fontFamily:"Abril Fatface",color:"black",bgcolor:"#EB5E57"}}  variant="contained" color="warning" ><b>SEND</b></Button>
-
+            <Button 
+             sx={{marginTop:3, borderRadius:4 ,
+             fontFamily:"Abril Fatface",color:
+             "black",bgcolor:"#fafafa"
+            }}  
+             variant="contained" 
+             color="warning"
+             component={Link}
+             to ={"/Verification"}
+             
+             >
+                <b>SEND</b>
+                </Button>
+            
     </Grid>
 
      </Box>

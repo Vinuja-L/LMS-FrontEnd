@@ -3,10 +3,12 @@ import {Grid,TextField,Box,Button, Typography,} from "@mui/material"
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Link } from "react-router-dom";
 import "../UserAuthentication/Authentication.css";
 
+
 const Signup = () =>{
-    const [signdata,setSigndata]=useState({
+    const [signdata,setSigndata]= React.useState({
         Firstname:"",
         Lastname:"",
         Email:"",
@@ -64,7 +66,7 @@ const Signup = () =>{
 
               <Typography color="#E8E1FA" variant="h7" padding={0.2} 
               textAlign='center' fontFamily="Abril Fatface">
-                Already have an Account?Login</Typography>
+                Already have an Account? <Link href="#"> Login</Link></Typography>
                   </Grid>
              
 
@@ -122,7 +124,7 @@ const Signup = () =>{
     displayEmpty
     inputProps={{ 'aria-label': 'Without label' }}
   >
-    <MenuItem value=''>
+    <MenuItem value='10'>
       <em>-Select-</em>
     </MenuItem>
     <MenuItem value={10}>Teacher</MenuItem>
@@ -136,7 +138,8 @@ const Signup = () =>{
 </Grid>
 </Grid>
 </Grid>
-<Button  
+<Button 
+ LinkComponent={Link} to {...'/signup'}
 sx={{marginTop:3, borderRadius:4,
 bgcolor:"#fafafa",color:"black",
 fontFamily:"Abril Fatface"}}
