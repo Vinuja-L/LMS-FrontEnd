@@ -39,7 +39,7 @@ const Emailconfirm = ()  => {
 
                             </Grid>
                             <Typography color="#E8E1FA" variant="h7" padding={0.2} textAlign='center' fontFamily="Abril Fatface">We have sent email to your Email Id <br/>to confirm the validity of our email address.<br/>
-                              After receiving the email follow the link provided to complete your registration.</Typography>
+                              After receiving the email you have to follow the link provided to complete your registration.</Typography>
                        
                    
                   
